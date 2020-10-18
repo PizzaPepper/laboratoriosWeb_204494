@@ -1,0 +1,90 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/10/2020, 08:14:22 PM
+    Author     : eliu
+*/
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+  position: absolute;
+  text-align: center;
+  height: 100px;
+  width: 100% ;
+  border:1px solid black;
+  background-color: rgb(196, 133, 255);
+}
+header h1{
+  padding-top: 30px;
+}
+
+nav {
+  background-color: #d1f4ff; 
+  position: absolute;
+  top: 101px;
+  left: 0;
+  width: 270px;
+  height: calc(100% - 144px);
+  border: 1px solid black;
+}
+
+nav li a {
+  display: block;
+  width: auto;  
+  text-decoration: none;
+  color: #8038F3;
+  background-color: #BAE2F2;
+  line-height: 2.5em;
+  height: 2.5em;
+  padding: 0 10px;
+  border-bottom: 1px solid Silver;
+}
+
+nav a:hover {
+  color: #eee;
+  background-color: #00C5FF;
+}
+
+main {
+  background-color: lightblue;
+  position: absolute;
+  top: 101px;
+  left: 271px;
+  height: calc(100% - 144px);
+  width: calc(100% - 271px);
+  border: 1px solid black;
+}
+
+.titulo{
+  border:1px dashed black;
+  border-radius: 10px;
+  margin: 10px auto 0 auto;
+  text-align: center;
+  display: block;
+  width: 400px;
+}
+
+footer{
+  background-color: rgb(0, 54, 153);
+  color: whitesmoke;
+  position: absolute;
+  border: 1px solid black;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  
+}
+
+footer p{
+  margin-left: 60px;
+  
+}
