@@ -19,7 +19,11 @@
         <%@include file="jspf_FragmentosPag/menuProductos.jspf" %>
         
         <main>
-            
+            <div class="titulo">
+                <h1>Productos</h1>
+                <p>Puedes Ingresar,eliminar,actualizar productos</p>
+
+            </div>
         </main>
         
         

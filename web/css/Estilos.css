@@ -73,6 +73,42 @@ main {
   width: 400px;
 }
 
+form{
+  border: 1px solid black;
+  margin: 10px auto 0 auto;
+}
+#form_CapturaClave{
+  height: 100px;
+  width: 200px;
+}
+
+.tabla{
+  display: table;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.fila{
+  display: table-row;
+}
+.celda{
+  display: table-cell;
+}
+
+
+input[type="text"]{
+ font-size: 15px;
+}
+
+input[type="submit"]{
+  font-size: 15px;
+  margin-left: 30%;
+}
+
+input[type="reset"]{
+  font-size: 15px;
+  margin-left: 50%;
+}
+
 footer{
   background-color: rgb(0, 54, 153);
   color: whitesmoke;

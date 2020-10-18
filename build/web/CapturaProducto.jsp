@@ -9,9 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/Estilos.css" />
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%@include file="jspf_FragmentosPag/Titulo.jspf"%>
+        
+        <%@include file="jspf_FragmentosPag/menuProductos.jspf" %>
+        
+        <main>
+            
+        </main>
+        
+        <%@include file="jspf_FragmentosPag/PieSeccion.jspf" %><h1>Hello World!</h1>
     </body>
 </html>
