@@ -11,7 +11,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="css/Estilos.css" />
-    <title>JSP Page</title>
+    <title>Captura Producto</title>
 </head>
 
 <body>
@@ -22,10 +22,10 @@
     <main>
         <div class="titulo">
             <h1>Capturar Clave</h1>
-            <p>captura la clave de un producto agregar al catálogo de productos.</p>
+            <p>Captura la clave de un producto agregar/editar al catálogo de productos.</p>
         </div>
 
-        <form action="obtenProducto" method="post" name="capturaClave" id="form_CapturaClave">
+        <form action="obtenProducto" method="post" name="CapturaClave" id="form_CapturaClave">
             <div class="tabla">
                 <div class="fila">
                     <div class="celda"><label for="claveId">Clave*</label></div>
