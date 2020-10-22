@@ -41,9 +41,9 @@
 
                 <c:forEach items="${listaProductos.lista}" var="producto">
                     <tr>
-                        <td>${cancion.clave}aaa</td>
-                        <td>${cancion.nombre}bbb</td>
-                        <td>${cancion.unidad}ccc</td>
+                        <td>${cancion.clave}</td>
+                        <td>${cancion.nombre}</td>
+                        <td>${cancion.unidad}</td>
                     </tr>
                 </c:forEach>
             </table>
