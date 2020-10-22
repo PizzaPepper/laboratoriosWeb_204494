@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/Estilos.css" />
-        <title>JSP Page</title>
+        <title>Productos Actualizar</title>
     </head>
     <body>
         <%@include file="jspf_FragmentosPag/Titulo.jspf"%>
@@ -19,6 +19,54 @@
         
         <main>
             
+            <div class="titulo">
+            <h1>Escojer producto a Actualizar</h1>
+            <p>Selecciona la canción a actualizar.</p>
+        </div>
+            
+            <form action="obtenProductoEditar" method="post">
+                <%-- Tabla donde se muestran los datos de todas los productos --%>
+                <table class="bicolor">
+
+
+                    <%-- Títulos de las columnas --%>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Clave</th>
+                        <th>Nombre</th>
+                        <th>Unidades</th>
+                       
+                    </tr>
+
+                    <%-- Despliega los datos de todas los productos. Los datos
+                         se encuentran en el bean listaProductos guardados en
+                         el objeto session por el servlet obtenCanciones. --%>
+                    <c:forEach items="${listaProductos.lista}" var="cancion" >
+                        <%-- Inserta en cada celda de una fila de la tabla
+                             uno de los atributos de la canción --%>
+                        <tr>
+                            <td><input type="radio" name="clave" value="${producto.clave}" /></td>
+                            <td>${producto.clave}</td>
+                            <td>${producto.nombre}</td>
+                            <td>${producto.unidad}</td>
+                            
+                        </tr>
+                    </c:forEach>
+                </table>
+                <br />
+                <table class="centrada" >
+                    <tr>
+                        <%-- Botones enviar --%>
+                        <td>
+                            <input type="submit" name="boton" value="Continuar" />
+                        </td>
+                        <%-- Botón limpiar --%>
+                        <td>
+                            <input type="reset" value="Limpiar" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </main>
         
         <%@include file="jspf_FragmentosPag/PieSeccion.jspf" %>
