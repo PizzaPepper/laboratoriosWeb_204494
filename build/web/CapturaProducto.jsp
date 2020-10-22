@@ -22,9 +22,8 @@
                 <h1>Capturar Producto</h1>
                 <p>Captura los datos de un producto agregar al catálogo de productos.</p>
             </div>
-
-
-            <form action="agregarProducto" method="post" name="CapturaProducto" id="form_CapturaProducto" >
+                
+        <form action="agregarProducto" method="post" name="CapturaProducto" id="form_CapturaProducto" >
                 <div class="tabla">
                     <%-- ID --%>
                     <div class="fila">
@@ -70,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-            </form>
+        </form>
         </main>
 
         <%@include file="jspf_FragmentosPag/PieSeccion.jspf" %>

@@ -11,7 +11,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="css/Estilos.css" />
-    <title>Captura Producto</title>
+    <title>Captura Clave</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <main>
         <div class="titulo">
             <h1>Capturar Clave</h1>
-            <p>Captura la clave de un producto agregar/editar al catálogo de productos.</p>
+            <p>Captura la clave de un producto agregar al catálogo de productos.</p>
         </div>
 
         <form action="obtenProducto" method="post" name="CapturaClave" id="form_CapturaClave">
