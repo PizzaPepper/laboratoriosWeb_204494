@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,6 +20,33 @@
         
         <main>
             
+            <div class="titulo">
+                <h1>Consulta de inventario materiales</h1>
+                <p>Se muestra una tabla con los materiales capturados</p>
+            </div>
+
+            <table class="bicolor">
+                
+                <%-- Título de la tabla --%>
+                <caption>
+                    ${listaMateriales.tituloTabla}
+                </caption>
+
+                <tr>
+                    <%-- Títulos de las columnas --%>
+                    <th>Producto</th>
+                    <th>Unidades</th>
+                </tr>
+
+                <c:forEach items="${listaMateriales.lista}" var="material">
+                    <tr>
+                        <td>${material.nombre}</td>
+                        <td>${material.unidad}</td>
+                    </tr>
+                </c:forEach>
+            </table>
+            </table>
+
         </main>
         
         
