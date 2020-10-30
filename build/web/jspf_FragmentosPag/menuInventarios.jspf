@@ -2,9 +2,9 @@
 <%@ page pageEncoding="UTF-8" %>
 <nav>
     <ul>
-        <li><a href="../CapturaMaterialInventariar.jsp">Inventariar Material</a></li>
-        <li><a href="../CapturaMaterialDesinventariar.jsp">Desinventariar Material</a></li>
-        <li><a href="../DespliegaInventarioMateriales.jsp">Consultar inventario de materiales</a></li>
-        <li><a href="index.jsp">Regresar Menu Principal</a></li>
+        <li><a href="Control?pagina=CapturaMaterialInventariar">Inventariar Material</a></li>
+        <li><a href="Control?pagina=CapturaMaterialDesinventariar">Desinventariar Material</a></li>
+        <li><a href="Control?pagina=DespliegaInventarioMateriales">Consultar inventario de materiales</a></li>
+        <li><a href="Control?pagina=index">Regresar Menu Principal</a></li>
     </ul>
 </nav>

@@ -2,10 +2,10 @@
 <%@ page pageEncoding="UTF-8" %>
 <nav>
     <ul>
-        <li><a href="../CapturaProducto.jsp">Agregar Producto</a></li>
-        <li><a href="../SeleccionaProductoActualizar.jsp">Actualizar Producto</a></li>
-        <li><a href="../SeleccionaProductosEliminar.jsp">Eliminar Productos</a></li>
-        <li><a href="../DespliegaProductos.jsp">Consultar Producto</a></li>
-        <li><a href="index.jsp">Regresar Menu Principal</a></li>
+        <li><a href="Control?pagina=CapturaProducto">Agregar Producto</a></li>
+        <li><a href="Control?pagina=SeleccionaProductoActualizar">Actualizar Producto</a></li>
+        <li><a href="Control?pagina=SeleccionaProductosEliminar">Eliminar Productos</a></li>
+        <li><a href="Control?pagina=DespliegaProductos">Consultar Producto</a></li>
+        <li><a href="Control?pagina=index">Regresar Menu Principal</a></li>
     </ul>
 </nav>
