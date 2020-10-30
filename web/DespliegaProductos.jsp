@@ -4,9 +4,12 @@
     Author     : eliu
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="objetosNegocio.Producto"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,7 +33,7 @@
 
                 <%-- Título de la tabla --%>
                 <caption>
-                    ${listaProductos.tituloTabla}
+                    Productos
                 </caption>
 
                 <tr>
@@ -39,14 +42,18 @@
                     <th>Nombre</th>
                     <th>Unidades</th>
                 </tr>
+                <%--${listaProductos.lista} --%>
 
-                <c:forEach items="${listaProductos.lista}" var="producto">
+
+
+                <c:forEach  items="${listaProductos}" var="producto"> 
                     <tr>
-                        <td>${producto.clave}</td>
-                        <td>${producto.nombre}</td>
-                        <td>${producto.unidad}</td>
+                        <td> ${producto.clave}</td>
+                        <td> ${producto.nombre}</td>
+                        <td> ${producto.unidad}</td>
                     </tr>
                 </c:forEach>
+
             </table>
         </main>
 

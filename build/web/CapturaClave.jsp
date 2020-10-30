@@ -25,7 +25,7 @@
             <p>Captura la clave de un producto agregar al catálogo de productos.</p>
         </div>
 
-        <form action="obtenProducto" method="post" name="CapturaClave" id="form_CapturaClave">
+        <form action="agregarProducto" method="post" name="CapturaClave" id="form_CapturaClave">
             <div class="tabla">
                 <div class="fila">
                     <div class="celda"><label for="claveId">Clave*</label></div>

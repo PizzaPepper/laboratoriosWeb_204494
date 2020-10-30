@@ -49,8 +49,8 @@
                     <div class="fila">
                         <div class="celda"><label for="unidadProd">Unidad</label></div>
                         <div class="celda">
-                            <input type="number" id="unidadProd" name="unidad" value="${param.unidad}" 
-                                   size="3" min="0" max="999"
+                            <input type="text" id="unidadProd" name="unidad" value="${param.unidad}" 
+                                   size="3" maxlength="3"
                                    />
                         </div>
                     </div>

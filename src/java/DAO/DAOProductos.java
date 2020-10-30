@@ -7,16 +7,18 @@ package DAO;
 
 import java.util.ArrayList;
 import objetosNegocio.Producto;
+import sun.security.jca.GetInstance;
 /**
  *
  * @author eliu
  */
 public class DAOProductos implements IDAO<Producto,String>{
-    private ArrayList<Producto> listaProductos;
+    private static ArrayList<Producto> listaProductos=new ArrayList<>();
     public DAOProductos() {
-        listaProductos=new ArrayList<Producto>();
+    
     }
 
+    
     @Override
     public void agregar(Producto t) {
         listaProductos.add(t);
