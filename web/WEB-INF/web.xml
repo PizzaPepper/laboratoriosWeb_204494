@@ -21,6 +21,14 @@
         <servlet-name>agregarProducto</servlet-name>
         <servlet-class>accion.agregarProducto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>editarProducto</servlet-name>
+        <servlet-class>accion.editarProducto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>eliminarProducto</servlet-name>
+        <servlet-class>accion.eliminarProducto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -37,6 +45,14 @@
         <servlet-name>agregarProducto</servlet-name>
         <url-pattern>/agregarProducto</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editarProducto</servlet-name>
+        <url-pattern>/editarProducto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>eliminarProducto</servlet-name>
+        <url-pattern>/eliminarProducto</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
@@ -44,15 +60,13 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>faces/index.jsp</welcome-file>
-        
     </welcome-file-list>
-        <error-page>
-            <exception-type>java.lang.Exception</exception-type>
-            <location>/error.jsp</location>
-        </error-page>
-        <error-page>
-            <exception-type>java.lang.Throwable</exception-type>
-            <location>/error.jsp</location>
-        </error-page>
-        
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
 </web-app>

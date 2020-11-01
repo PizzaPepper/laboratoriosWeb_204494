@@ -179,3 +179,12 @@ footer p{
     margin-left: 60px;
 
 }
+
+#errorPagina{
+    padding-left:40% ;
+}
+
+#errorPagina img{
+    width: 200px;
+    height: 200px;
+}

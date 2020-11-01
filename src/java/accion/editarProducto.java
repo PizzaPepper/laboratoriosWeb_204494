@@ -6,6 +6,7 @@
 package accion;
 
 import DAO.DAOProductos;
+import DAO.IDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -20,7 +21,7 @@ import objetosNegocio.Producto;
  *
  * @author eliu
  */
-public class agregarProducto extends HttpServlet {
+public class editarProducto extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,28 +34,35 @@ public class agregarProducto extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         response.setContentType("text/html;charset=UTF-8");
-
-        String Clave = request.getParameter("clave");
-        String Nombre = request.getParameter("nombre");
-        String Unidad = request.getParameter("unidad");
-
         HttpSession session = request.getSession();
         RequestDispatcher rd;
-        String siguiente = null;
 
-        if (Nombre == null) {
-           // session.setAttribute("param.Clave", Clave);
-           // session.setAttribute("param.Nombre", Nombre);
-           // session.setAttribute("param.Unidad", Unidad);
-            siguiente = "CapturaProducto.jsp";
+        String siguiente = null;
+        IDAO lista = new DAOProductos();
+
+        String id = request.getParameter("clave");
+        String nombre = request.getParameter("nombre");
+        String unidad = request.getParameter("unidad");
+
+        if (nombre != null) {
+
+            Producto newP = (Producto) lista.consultar(id);
+            newP.setNombre(nombre);
+            newP.setUnidad(unidad);
+            lista.actualizar(newP);
+            siguiente = "SeleccionaProductoActualizar.jsp";
+
         } else {
-            siguiente = "Productos.jsp";
-            DAOProductos lista = new DAOProductos();
-            lista.agregar(new Producto(Clave, Nombre, Unidad));
-            session.setAttribute("listaProductos", lista.consultarTodos());
+
+            Producto newP = (Producto) lista.consultar(id);
+            System.out.println("Producto: " + newP);
+            session.setAttribute("nombre", newP.getNombre());
+            session.setAttribute("unidad", newP.getUnidad());
+            siguiente = "EditaProducto.jsp";
+
         }
+
         rd = request.getRequestDispatcher(siguiente);
 
         // Redirecciona a la página JSP siguiente

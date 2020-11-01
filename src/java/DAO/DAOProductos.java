@@ -15,7 +15,6 @@ import sun.security.jca.GetInstance;
 public class DAOProductos implements IDAO<Producto,String>{
     private static ArrayList<Producto> listaProductos=new ArrayList<>();
     public DAOProductos() {
-    
     }
 
     

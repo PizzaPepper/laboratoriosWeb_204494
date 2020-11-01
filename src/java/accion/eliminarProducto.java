@@ -6,6 +6,7 @@
 package accion;
 
 import DAO.DAOProductos;
+import DAO.IDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -20,7 +21,7 @@ import objetosNegocio.Producto;
  *
  * @author eliu
  */
-public class agregarProducto extends HttpServlet {
+public class eliminarProducto extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,33 +34,22 @@ public class agregarProducto extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         response.setContentType("text/html;charset=UTF-8");
-
-        String Clave = request.getParameter("clave");
-        String Nombre = request.getParameter("nombre");
-        String Unidad = request.getParameter("unidad");
-
         HttpSession session = request.getSession();
         RequestDispatcher rd;
-        String siguiente = null;
-
-        if (Nombre == null) {
-           // session.setAttribute("param.Clave", Clave);
-           // session.setAttribute("param.Nombre", Nombre);
-           // session.setAttribute("param.Unidad", Unidad);
-            siguiente = "CapturaProducto.jsp";
-        } else {
-            siguiente = "Productos.jsp";
-            DAOProductos lista = new DAOProductos();
-            lista.agregar(new Producto(Clave, Nombre, Unidad));
-            session.setAttribute("listaProductos", lista.consultarTodos());
-        }
+        
+        IDAO lista=new DAOProductos();
+        String siguiente="SeleccionaProductosEliminar.jsp";
+        
+        String id=request.getParameter("clave");
+        
+        lista.eliminar(new Producto(id));
+        
         rd = request.getRequestDispatcher(siguiente);
 
         // Redirecciona a la página JSP siguiente
         rd.forward(request, response);
-
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

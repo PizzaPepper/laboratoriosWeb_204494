@@ -25,7 +25,7 @@
             <p>Selecciona la canción a eliminar.</p>
         </div>
             
-            <form action="obtenProductoEliminar" method="post">
+            <form action="eliminarProducto" method="post">
                 <%-- Tabla donde se muestran los datos de todas los productos --%>
                 <table class="bicolor">
 
@@ -39,18 +39,13 @@
                        
                     </tr>
 
-                    <%-- Despliega los datos de todas los productos. Los datos
-                         se encuentran en el bean listaProductos guardados en
-                         el objeto session por el servlet obtenCanciones. --%>
-                    <c:forEach items="${listaProductos.lista}" var="cancion" >
-                        <%-- Inserta en cada celda de una fila de la tabla
-                             uno de los atributos de la canción --%>
+                    <c:forEach items="${listaProductos}" var="producto" >
+
                         <tr>
                             <td><input type="radio" name="clave" value="${producto.clave}" /></td>
                             <td>${producto.clave}</td>
                             <td>${producto.nombre}</td>
                             <td>${producto.unidad}</td>
-                            
                         </tr>
                     </c:forEach>
                 </table>

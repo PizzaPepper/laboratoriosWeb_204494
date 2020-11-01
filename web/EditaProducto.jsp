@@ -40,7 +40,7 @@
                     <div class="fila">
                         <div class="celda"><label for="nombreProd">Nombre*</label></div>
                         <div class="celda">
-                            <input type="text" id="nombreProd" name="nombre" value="${param.nombre}" size="20" maxlength="35"
+                            <input type="text" id="nombreProd" name="nombre" value="${nombre}" size="20" maxlength="35"
                                    required />
                         </div>
                     </div>
@@ -49,8 +49,8 @@
                     <div class="fila">
                         <div class="celda"><label for="unidadProd">Unidad</label></div>
                         <div class="celda">
-                            <input type="number" id="unidadProd" name="unidad" value="${param.unidad}" 
-                                   size="3" min="0" max="999"
+                            <input type="text" id="unidadProd" name="unidad" value="${unidad}" 
+                                   size="3" maxlength="3"
                                    />
                         </div>
                     </div>
