@@ -87,9 +87,13 @@ form{
     width: 240px;
 }
 
-.inventarioProducto{
-    width: 250px;
+.inventarioMaterial{
+    width: 300px;
     height: 120px;
+}
+
+select{
+    width: 145px;
 }
 
 .tabla{
@@ -140,8 +144,8 @@ table.bicolor {
 
 table.bicolor th{
     text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
     
 }
 
@@ -151,10 +155,15 @@ th {
     border: 1px solid #888;
 }
 
+td{
+    text-align: center;
+}
+
 td.derecha {
     text-align: right;
     padding-right: 5px;
 }
+
 
 td.gris {
     background-color: #ddd;

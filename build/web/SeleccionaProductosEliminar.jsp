@@ -35,7 +35,7 @@
                         <th>&nbsp;</th>
                         <th>Clave</th>
                         <th>Nombre</th>
-                        <th>Unidades</th>
+                        <th>Unidad</th>
                        
                     </tr>
 

@@ -11,7 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/Estilos.css" />
-        <title>JSP Page</title>
+        <title>Desinventariar Material</title>
     </head>
     <body>
         <%@include file="jspf_FragmentosPag/Titulo.jspf"%>
@@ -20,36 +20,24 @@
         
         <main>
             <div class="titulo">
-                <h1>Desinventariar Producto</h1>
+                <h1>Desinventariar Material</h1>
                 <p>Captura los productos a desinventariar.</p>
             </div>
     
-            <form action="desinventariarProducto" method="post" name="CapturarDesinventariarProducto" class="inventarioProducto">
+            <form action="desinventariarMaterial" method="post" name="CapturarDesinventariarMaterial" class="inventarioMaterial">
                 <div class="tabla">
                     <%--Lista Productos--%>
                     <div class="fila">
                         <div class="celda"> <label for="productosId">Lista de productos*</label></div>
                         <div class="celda">
                             
-                            <select name="ListaProductos" id="productosId">
+                            <select name="productoSeleccionado" id="productosId">
                                 <%-- La lista productos se encuentran
                                          en el bean listaProductos almacenado en el
                                          objeto session por el servlet obtenProductos. --%>
-                                <c:forEach items="${listaProductos.lista}" var="producto" varStatus="opcion">
-                                    <%--
-                                            Aun en proceso
-                                        <c:choose>
-                                            <c:when test="${cancion.genero.cveGenero == genero.cveGenero}" >
-                                                <option selected value="${genero.cveGenero}">${genero.nombre}</option>
-                                            </c:when>
-                                        </c:choose>
-                                        --%>
+                                <c:forEach items="${listaMateriales}" var="material" varStatus="opcion">
+                                    <option value="${material.clave}">${material}</option>    
                                 </c:forEach>
-                                <%--Test, esto se quitara luego de implementar los servlets --%>
-                                <option value="producto1">Producto1</option>
-                                <option value="producto2">Producto2</option>
-                                <option value="producto3">Producto3</option>
-                                <option value="producto4">Producto4</option>
                             </select>
                         </div>
                     </div>
@@ -57,7 +45,7 @@
                     <%--Cantidad del producto--%>
                     <div class="fila">
                         <div class="celda"> <label for="cantidadId">Cantidad*</label> </div>
-                        <div class="celda"> <input type="number" id="cantidadId" name="unidad" value="${param.cantidad}" 
+                        <div class="celda"> <input type="number" id="cantidadId" name="cantidad" value="0" 
                             size="3" min="1" max="999"/></div>
                     </div>
                     <br>

@@ -19,33 +19,22 @@ public class Material extends Producto{
         this.cantidad = material;
     }
 
-    public Material(int material, String clave) {
-        super(clave);
-        this.cantidad = material;
-    }
-
-    public Material(int material, String clave, String nombre) {
-        super(clave, nombre);
-        this.cantidad = material;
-    }
-
-    
-    public Material(int material, String clave, String nombre, String unidad) {
+    public Material(int cantidad, String clave, String nombre, String unidad) {
         super(clave, nombre, unidad);
-        this.cantidad = material;
+        this.cantidad = cantidad;
     }
 
-    public int getMaterial() {
+    public int getCantidad() {
         return cantidad;
     }
 
-    public void setMaterial(int material) {
-        this.cantidad = material;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     @Override
     public String toString() {
-        return "Cantidad: "+this.cantidad;
+        return "Producto: "+this.nombre +", Cantidad: "+this.cantidad;
     }
     
     

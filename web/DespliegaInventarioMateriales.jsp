@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,24 +30,23 @@
                 
                 <%-- Título de la tabla --%>
                 <caption>
-                    ${listaMateriales.tituloTabla}
+                    Materiales
                 </caption>
 
                 <tr>
                     <%-- Títulos de las columnas --%>
                     <th>Producto</th>
-                    <th>Unidades</th>
+                    <th>Cantidad</th>
                 </tr>
 
-                <c:forEach items="${listaMateriales.lista}" var="material">
+                <c:forEach items="${listaMateriales}" var="material">
                     <tr>
-                        <td>${material.nombre}</td>
-                        <td>${material.unidad}</td>
+                        <td>${material.clave}, ${material.nombre}, ${material.unidad}</td>
+                        <td>${material.cantidad}</td>
                     </tr>
                 </c:forEach>
             </table>
-            </table>
-
+            
         </main>
         
         

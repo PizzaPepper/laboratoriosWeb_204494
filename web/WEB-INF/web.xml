@@ -29,6 +29,14 @@
         <servlet-name>eliminarProducto</servlet-name>
         <servlet-class>accion.eliminarProducto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>inventariarMaterial</servlet-name>
+        <servlet-class>accion.inventariarMaterial</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>desinventariarMaterial</servlet-name>
+        <servlet-class>accion.desinventariarMaterial</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -52,6 +60,14 @@
     <servlet-mapping>
         <servlet-name>eliminarProducto</servlet-name>
         <url-pattern>/eliminarProducto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inventariarMaterial</servlet-name>
+        <url-pattern>/inventariarMaterial</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>desinventariarMaterial</servlet-name>
+        <url-pattern>/desinventariarMaterial</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

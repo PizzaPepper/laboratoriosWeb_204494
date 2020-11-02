@@ -18,7 +18,10 @@
         <%@include file="jspf_FragmentosPag/menuInventarios.jspf" %>
         
         <main>
-            
+            <div class="titulo">
+                <h1>Inventariar</h1>
+                <p>Puedes consultar y inventariar o desinventariar un producto</p>
+            </div>
         </main>
         
         

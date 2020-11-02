@@ -40,7 +40,7 @@
                     <%-- Títulos de las columnas --%>
                     <th>Clave</th>
                     <th>Nombre</th>
-                    <th>Unidades</th>
+                    <th>Unidad</th>
                 </tr>
                 <%--${listaProductos.lista} --%>
 
