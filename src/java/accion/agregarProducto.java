@@ -45,9 +45,6 @@ public class agregarProducto extends HttpServlet {
         String siguiente = null;
 
         if (Nombre == null) {
-           // session.setAttribute("param.Clave", Clave);
-           // session.setAttribute("param.Nombre", Nombre);
-           // session.setAttribute("param.Unidad", Unidad);
             siguiente = "CapturaProducto.jsp";
         } else {
             siguiente = "Productos.jsp";

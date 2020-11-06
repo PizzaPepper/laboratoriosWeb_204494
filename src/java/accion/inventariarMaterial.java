@@ -38,21 +38,21 @@ public class inventariarMaterial extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
-        
-        IDAO listaP=new DAOProductos();
-        IDAO listaM=new DAOMateriales();
+
+        IDAO listaP = new DAOProductos();
+        IDAO listaM = new DAOMateriales();
         RequestDispatcher rd;
-        
-        String siguiente=null;
-        
-        String id=request.getParameter("productoSeleccionado");
-        String cantidad=request.getParameter("cantidad");
-        Producto p= (Producto) listaP.consultar(id);
-        Material m=new Material(Integer.parseInt(cantidad), p.getClave(), p.getNombre(), p.getUnidad());
+
+        String siguiente = null;
+
+        String id = request.getParameter("productoSeleccionado");
+        String cantidad = request.getParameter("cantidad");
+        Producto p = (Producto) listaP.consultar(id);
+        Material m = new Material(Integer.parseInt(cantidad), p.getClave(), p.getNombre(), p.getUnidad());
         listaM.agregar(m);
         session.setAttribute("listaMateriales", listaM.consultarTodos());
-        
-        siguiente="CapturaMaterialInventariar.jsp";
+
+        siguiente = "CapturaMaterialInventariar.jsp";
         rd = request.getRequestDispatcher(siguiente);
 
         // Redirecciona a la página JSP siguiente

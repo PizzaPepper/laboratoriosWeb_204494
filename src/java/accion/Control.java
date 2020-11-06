@@ -32,44 +32,44 @@ public class Control extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
-        String paginaSel=request.getParameter("pagina");
-        
+
+        String paginaSel = request.getParameter("pagina");
+
         HttpSession session = request.getSession();
         RequestDispatcher rd;
         String siguiente = null;
 
         session.setAttribute("paginaSel", paginaSel);
-        
-        switch(paginaSel){
+
+        switch (paginaSel) {
             case "CapturaProducto":
-                siguiente="CapturaClave.jsp";
+                siguiente = "CapturaClave.jsp";
                 break;
             case "SeleccionaProductoActualizar":
-                siguiente="SeleccionaProductoActualizar.jsp";
+                siguiente = "SeleccionaProductoActualizar.jsp";
                 break;
             case "SeleccionaProductosEliminar":
-                siguiente="SeleccionaProductosEliminar.jsp";
+                siguiente = "SeleccionaProductosEliminar.jsp";
                 break;
             case "DespliegaProductos":
-                siguiente="DespliegaProductos.jsp";
+                siguiente = "DespliegaProductos.jsp";
                 break;
             case "CapturaMaterialInventariar":
-                siguiente="CapturaMaterialInventariar.jsp";
+                siguiente = "CapturaMaterialInventariar.jsp";
                 break;
             case "CapturaMaterialDesinventariar":
-                siguiente="CapturaMaterialDesinventariar.jsp";
+                siguiente = "CapturaMaterialDesinventariar.jsp";
                 break;
             case "DespliegaInventarioMateriales":
-                siguiente="DespliegaInventarioMateriales.jsp";
+                siguiente = "DespliegaInventarioMateriales.jsp";
                 break;
             case "index":
-                siguiente="index.jsp";
+                siguiente = "index.jsp";
         }
-        
+
         // Obten el objeto RequestDispatcher
         rd = request.getRequestDispatcher(siguiente);
-        
+
         // Redirecciona a la página JSP siguiente
         rd.forward(request, response);
     }

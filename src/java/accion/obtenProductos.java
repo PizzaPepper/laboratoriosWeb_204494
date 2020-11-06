@@ -42,16 +42,12 @@ public class obtenProductos extends HttpServlet {
         // Obten el objeto session que contiene a las variables con ámbito de sesion
         HttpSession session = request.getSession();
 
-        
         String paginaSel = (String) session.getAttribute("paginaSel");
-
-        
-        
 
         // En este bean de tipo Lista, se almacena la lista de
         // canciones leídas de la tabla canciones de la base de datos musica
-        DAOProductos p=new DAOProductos();
-        List<Producto> productos=p.consultarTodos();
+        DAOProductos p = new DAOProductos();
+        List<Producto> productos = p.consultarTodos();
         // Se requiere guardar en ambito de sesión por que se va a ocupar
         // en la solicitud de correccion de falla de validacion del lado
         // del servidor
@@ -61,7 +57,7 @@ public class obtenProductos extends HttpServlet {
             case "DespliegaProductos":
                 siguiente = "DespliegaProductos.jsp";
                 break;
-            
+
         }
 
         // Establece la página JSP o servlet siguiente

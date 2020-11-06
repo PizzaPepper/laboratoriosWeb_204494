@@ -33,27 +33,24 @@ public class desinventariarMaterial extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        IDAO listaM=new DAOMateriales();
-        
+        IDAO listaM = new DAOMateriales();
+
         RequestDispatcher rd;
-        
-        String siguiente=null;
-        
-        String id=request.getParameter("productoSeleccionado");
-        System.out.println(id);
-        int cant=Integer.parseInt(request.getParameter("cantidad")); 
-        System.out.println(cant);
-        Material m=(Material) listaM.consultar(id);
-        
-        
-        int resultado= m.getCantidad()-cant;
-        if(resultado<=0)
+
+        String siguiente = null;
+
+        String id = request.getParameter("productoSeleccionado");
+        int cant = Integer.parseInt(request.getParameter("cantidad"));
+        Material m = (Material) listaM.consultar(id);
+
+        int resultado = m.getCantidad() - cant;
+        if (resultado <= 0) {
             listaM.eliminar(m);
-        else{
+        } else {
             m.setCantidad(resultado);
         }
-        
-        siguiente="CapturaMaterialDesinventariar.jsp";
+
+        siguiente = "CapturaMaterialDesinventariar.jsp";
         rd = request.getRequestDispatcher(siguiente);
 
         // Redirecciona a la página JSP siguiente

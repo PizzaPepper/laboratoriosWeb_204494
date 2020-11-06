@@ -35,21 +35,20 @@ public class eliminarProducto extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        HttpSession session = request.getSession();
         RequestDispatcher rd;
-        
-        IDAO lista=new DAOProductos();
-        String siguiente="SeleccionaProductosEliminar.jsp";
-        
-        String id=request.getParameter("clave");
-        
+
+        IDAO lista = new DAOProductos();
+        String siguiente = "SeleccionaProductosEliminar.jsp";
+
+        String id = request.getParameter("clave");
+
         lista.eliminar(new Producto(id));
-        
+
         rd = request.getRequestDispatcher(siguiente);
 
         // Redirecciona a la página JSP siguiente
         rd.forward(request, response);
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

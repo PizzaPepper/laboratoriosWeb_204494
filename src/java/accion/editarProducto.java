@@ -56,7 +56,6 @@ public class editarProducto extends HttpServlet {
         } else {
 
             Producto newP = (Producto) lista.consultar(id);
-            System.out.println("Producto: " + newP);
             session.setAttribute("nombre", newP.getNombre());
             session.setAttribute("unidad", newP.getUnidad());
             siguiente = "EditaProducto.jsp";

@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Jorge%20Eliu/Documents/NetBeansProjects/laboratoriosWeb_204494/src/java/accion/eliminarProducto.java</file>
+            <file>file:/C:/Users/Jorge%20Eliu/Documents/NetBeansProjects/laboratoriosWeb_204494/src/java/accion/editarProducto.java</file>
+            <file>file:/C:/Users/Jorge%20Eliu/Documents/NetBeansProjects/laboratoriosWeb_204494/src/java/accion/agregarProducto.java</file>
+            <file>file:/C:/Users/Jorge%20Eliu/Documents/NetBeansProjects/laboratoriosWeb_204494/src/java/accion/desinventariarMaterial.java</file>
+            <file>file:/C:/Users/Jorge%20Eliu/Documents/NetBeansProjects/laboratoriosWeb_204494/src/java/accion/inventariarMaterial.java</file>
+            <file>file:/C:/Users/Jorge%20Eliu/Documents/NetBeansProjects/laboratoriosWeb_204494/src/java/accion/obtenProductos.java</file>
+        </group>
     </open-files>
 </project-private>
